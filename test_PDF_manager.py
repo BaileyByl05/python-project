@@ -31,10 +31,10 @@ class TestPdfManagerFunctions(unittest.TestCase):
             
     
     def test_merge_pdf(self):
-        path = os.path.join(os.path.dirname(__file__), 'TestFiles\\')
-        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles\\test_merged.pdf')
+        path = os.path.join(os.path.dirname(__file__), 'TestFiles/')
+        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles/test_merged.pdf')
         pdf_files = ['test_pdf1.pdf', 'test_pdf2.pdf']
-        reference_path = os.path.join(os.path.dirname(__file__), 'TestFiles\\reference_merged.pdf')
+        reference_path = os.path.join(os.path.dirname(__file__), 'TestFiles/reference_merged.pdf')
         
         merge_pdf_files(path, pdf_files, save_path)
         
