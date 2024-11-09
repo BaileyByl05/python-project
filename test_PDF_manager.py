@@ -42,10 +42,10 @@ class TestPdfManagerFunctions(unittest.TestCase):
         
         
     def test_rotate_pdf(self):
-        path = os.path.join(os.path.dirname(__file__), 'TestFiles\\test_pdf1.pdf')
+        path = os.path.join(os.path.dirname(__file__), 'TestFiles/test_pdf1.pdf')
         page = 0
-        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles\\test_rotated.pdf')
-        reference_path = os.path.join(os.path.dirname(__file__), 'TestFiles\\reference_rotatedPage.pdf')
+        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles/test_rotated.pdf')
+        reference_path = os.path.join(os.path.dirname(__file__), 'TestFiles/reference_rotatedPage.pdf')
         
         rotate_pdf_page(path, page, save_path)
         
@@ -53,9 +53,9 @@ class TestPdfManagerFunctions(unittest.TestCase):
         
         
     def test_encrypt_pdf(self):
-        path = os.path.join(os.path.dirname(__file__), 'TestFiles\\test_pdf1.pdf')
+        path = os.path.join(os.path.dirname(__file__), 'TestFiles/test_pdf1.pdf')
         password = 'password123'
-        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles\\test_encrypted.pdf')
+        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles/test_encrypted.pdf')
         
         encrypt_pdf_file(path, password, save_path)
         
@@ -64,9 +64,9 @@ class TestPdfManagerFunctions(unittest.TestCase):
         self.assertTrue(pdf_reader.isEncrypted)
     
     def test_decyrpt_pdf(self):
-        path = os.path.join(os.path.dirname(__file__), 'TestFiles\\test_encrypted.pdf')
+        path = os.path.join(os.path.dirname(__file__), 'TestFiles/test_encrypted.pdf')
         password = 'password123'
-        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles\\test_decrypted.pdf')
+        save_path = os.path.join(os.path.dirname(__file__), 'TestFiles/test_decrypted.pdf')
         
         decrypt_pdf_file(path, password, save_path)
         
